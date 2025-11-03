@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia Semiológica: Hematología</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #212529;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #007bff;
+        }
+        h3, h4 {
+            color: #343a40;
+        }
+        /* Estilo para las secciones principales colapsables */
+        details.seccion {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        details.seccion > summary {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 15px 20px;
+            cursor: pointer;
+            list-style: none; /* Oculta el marcador por defecto */
+            background-color: #f1f3f5;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        details.seccion > summary::-webkit-details-marker {
+            display: none; /* Oculta marcador en Chrome/Safari */
+        }
+        details.seccion[open] > summary {
+            background-color: #e9ecef;
+            border-radius: 8px 8px 0 0;
+        }
+        .contenido-seccion {
+            padding: 20px;
+        }
+        
+        /* Estilo para las sub-secciones colapsables */
+        details.sub-seccion {
+            background: #fdfdfd;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        details.sub-seccion > summary {
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            cursor: pointer;
+            list-style-position: inside;
+            background-color: #f8f9fa;
+        }
+        details.sub-seccion[open] > summary {
+            background-color: #f1f3f5;
+        }
+        .contenido-sub-seccion {
+            padding: 15px 15px 15px 40px; /* Indentación para el contenido */
+        }
+
+        /* Estilos para Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 1px solid #ced4da;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+            font-weight: 600;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+        
+        /* Estilos para elementos especiales */
+        .perla-clinica {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffeeba;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .analogia {
+            background-color: #e6f7ff;
+            border-left: 5px solid #b3e0ff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        #indice {
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 25px;
+        }
+        #indice ul {
+            padding-left: 20px;
+        }
+        #indice li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enciclopedia Semiológica del Capítulo de Hematología</h1>
+    <p><strong>ATENCIÓN: CATEDRÁTICO DE SEMIOLOGÍA MÉDICA</strong><br>
+    La presente es una "Enciclopedia Semiológica" del Capítulo de Hematología, estructurada con la máxima densidad y profundidad clínica, basándose rigurosamente solo en la información contenida en la Guía de semiología de mi U, Argente y Goic. Se exige la retención y la aplicación exhaustiva de todos los detalles relevantes para el razonamiento diagnóstico.</p>
+
+    <nav id="indice">
+        <h2>Índice Rápido</h2>
+        <ul>
+            <li><a href="#seccion1">I. Definiciones Clave y Conceptos Fundamentales</a></li>
+            <li><a href="#seccion2">II. Técnicas de Exploración (Semiotecnia Minuciosa)</a></li>
+            <li><a href="#seccion3">III. Signos y Síntomas Cardinales: Análisis y Correlación</a></li>
+            <li><a href="#seccion4">IV. Hallazgos de Laboratorio Clave (Signos Objetivos)</a></li>
+            <li><a href="#seccion5">V. Perlas Clínicas y Razonamiento Fisiopatológico</a></li>
+            <li><a href="#seccion6">VI. Síndromes y Patologías Específicas (Amplitud Crítica)</a></li>
+        </ul>
+    </nav>
+
+    <details class="seccion" id="seccion1">
+        <summary>I. Definiciones Clave y Conceptos Fundamentales</summary>
+        <div class="contenido-seccion">
+            <table>
+                <tbody>
+                    <tr><td><strong>Anemia:</strong></td><td>Disminución de la masa de GR circulante. En la práctica: Hb < 12 g/dL (mujeres) e < 13 g/dL (hombres).</td></tr>
+                    <tr><td><strong>Policitemia o Eritrocitosis:</strong></td><td>Aumento de GR circulantes. Hto > 49% (hombres) o > 48% (mujeres).</td></tr>
+                    <tr><td><strong>Pancitopenia:</strong></td><td>Depresión de las tres líneas celulares (anemia, leucopenia y trombocitopenia).</td></tr>
+                    <tr><td><strong>Trombocitopenia (Plaquetopenia):</strong></td><td>Descenso de plaquetas < 150.000/µL. Causa más frecuente de sangrado anormal.</td></tr>
+                    <tr><td><strong>Trombocitosis (Hiperplaquetosis):</strong></td><td>Aumento de plaquetas > 450.000/µL.</td></tr>
+                    <tr><td><strong>Síndrome Hemorragíparo (Purpúrico):</strong></td><td>Trastorno sistémico de la hemostasia que predispone al sangrado fácil, espontáneo o desproporcionado.</td></tr>
+                    <tr><td><strong>Petequias:</strong></td><td>Lesiones hemorrágicas puntiformes (< 3 mm). Típicamente planas en las trombocitopenias.</td></tr>
+                    <tr><td><strong>Equimosis:</strong></td><td>Lesiones hemorrágicas > 10 mm de diámetro.</td></tr>
+                    <tr><td><strong>Hematoma:</strong></td><td>Extravasación de sangre en tejidos profundos que genera un aumento de volumen palpable (sufijo –oma).</td></tr>
+                    <tr><td><strong>Arregenerativa vs. Regenerativa (Anemia):</strong></td><td>Clasificación basada en reticulocitos. Regenerativas (reticulocitos altos) se ven en hemólisis o hemorragia aguda (respuesta medular adecuada).</td></tr>
+                    <tr><td><strong>Rouleaux (Fenómeno de):</strong></td><td>Agregación de eritrocitos en "pilas de monedas" en el frotis, por aumento de proteínas plasmáticas (Hipergammaglobulinemia, Mieloma Múltiple).</td></tr>
+                    <tr><td><strong>Leucemia:</strong></td><td>Proliferación clonal neoplásica de células progenitoras de leucocitos en médula ósea.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+
+    <details class="seccion" id="seccion2" open>
+        <summary>II. Técnicas de Exploración (Semiotecnia Minuciosa)</summary>
+        <div class="contenido-seccion">
+            <p>El examen físico debe evaluar la repercusión sistémica del trastorno hematológico (anemia, sangrado, infección) y la búsqueda de organomegalias o adenopatías.</p>
+            
+            <details class="sub-seccion">
+                <summary>A. Evaluación de la Serie Roja (Palidez y Repercusión)</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Palidez (Inspección Dirigida):</h4>
+                    <ul>
+                        <li>La palidez es un signo objetivo, pero no es patognomónico de anemia.</li>
+                        <li><strong>Sitios de Búsqueda:</strong> Mucosas (labios, paladar, conjuntivas), lecho ungueal y palmas. La palidez conjuntival es el hallazgo más utilizado.</li>
+                        <li><strong>Correlación:</strong> Palidez mantenida (anemia) vs. transitoria (vasoconstricción).</li>
+                    </ul>
+                    <h4>Examen General:</h4>
+                    <ul>
+                        <li>Buscar <strong>ictericia</strong> (en escleras), que junto a la anemia, sugiere hemólisis.</li>
+                        <li>Buscar <strong>coiloniquia</strong> (uñas en cuchara) y <strong>glositis</strong> (lengua depapilada).</li>
+                    </ul>
+                    <h4>Evaluación Hemodinámica (Hemorragia Aguda):</h4>
+                    <ul>
+                        <li>Señales de alarma: hipotensión arterial, taquicardia, llenado capilar prolongado.</li>
+                        <li>La <strong>hipotensión ortostática</strong> es un indicador sensible de pérdida del 20% o más del volumen sanguíneo.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>B. Evaluación de Organomegalias y Linfáticos</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Exploración del Bazo (Esplenomegalia):</h4>
+                    <ul>
+                        <li>La esplenomegalia palpable, asociada a ictericia y anemia, constituye la <strong>tríada del síndrome hemolítico</strong>.</li>
+                        <li><strong>Etiología:</strong> Si es masiva, pensar en hemopatía maligna (linfoma, leucemia, mieloproliferativo), hipertensión portal o amiloidosis.</li>
+                        <li><strong>Técnica:</strong> Palpación buscando el polo inferior, con paciente en decúbito lateral derecho.</li>
+                    </ul>
+                    <h4>Exploración Ganglionar (Adenopatías):</h4>
+                    <ul>
+                        <li><strong>Territorios:</strong> Explorar dirigidamente cervical, axilar, inguinal, epitrocleares.</li>
+                        <li><strong>Descripción Minuciosa:</strong> Describir tamaño, consistencia (blanda, firme, dura), movilidad (adheridas = neoplasia) e indoloras (linfoma) vs. dolorosas (infección).</li>
+                        <li><strong>Ganglio de Virchow (Centinela):</strong> Supraclavicular izquierdo, sospechar neoplasia abdominal (páncreas, gástrica).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>C. Evaluación de Sangrado y Púrpura (Semiología de la Piel)</summary>
+                <div class="contenido-sub-seccion">
+                    <ul>
+                        <li><strong>Vitropresión:</strong> Maniobra cardinal. Las lesiones purpúricas <strong>no desaparecen</strong>.</li>
+                        <li><strong>Púrpura Palpable vs. No Palpable:</strong>
+                            <ul>
+                                <li><strong>Palpable:</strong> Indica inflamación vascular (vasculitis).</li>
+                                <li><strong>Petequias planas (no palpables):</strong> Sugieren trombocitopenia.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Diferenciación de Hemostasia:</strong>
+                            <ul>
+                                <li><strong>Sangrado Superficial (HP):</strong> Petequias, equimosis pequeñas, sangrado mucoso (epistaxis, gingivorragia).</li>
+                                <li><strong>Sangrado Profundo (HS):</strong> Hematomas voluminosos, hemartrosis.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Percusión Esternal (Signo de Craven):</strong> Dolor a la percusión del esternón sugiere infiltración medular por leucemia aguda.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </details>
+
+    <details class="seccion" id="seccion3">
+        <summary>III. Signos y Síntomas Cardinales: Análisis y Correlación Clínica</summary>
+        <div class="contenido-seccion">
+
+            <details class="sub-seccion">
+                <summary>1. Palidez y Síntomas Anémicos</summary>
+                <div class="contenido-sub-seccion">
+                    <p>La anemia es un síndrome secundario a una alteración de base.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Signo / Síntoma</th>
+                                <th>Correlación Clínica y DxD</th>
+                                <th>Razonamiento Fisiopatológico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Palidez Mantenida</strong></td>
+                                <td>Anemia Crónica, Hipotiroidismo, Insuficiencia Renal.</td>
+                                <td>Disminución de GR y/o vasoconstricción sistémica.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Palpitaciones / Taquicardia</strong></td>
+                                <td>Anemia moderada a severa.</td>
+                                <td>Estado circulatorio hiperquinético compensatorio (aumenta flujo para suplir O₂).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Soplo Sistólico Funcional</strong></td>
+                                <td>Anemia severa.</td>
+                                <td>Aceleración del flujo sanguíneo por la hiperquinesia.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Parestesias / Apalestesia</strong></td>
+                                <td>Déficit de Vitamina B12 (Anemia Megaloblástica).</td>
+                                <td>Trastorno de mielinización (síndrome neuroanémico).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Coiloniquia / Glositis</strong></td>
+                                <td>Anemia Ferropénica.</td>
+                                <td>Signos de déficit de hierro en tejidos de rápido recambio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Disnea de Esfuerzo</strong></td>
+                                <td>Anemia, Insuficiencia cardíaca.</td>
+                                <td>Hipoxemia/Hipoxia anémica.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>2. Signos Purpúricos y Hemorragia Anormal</summary>
+                <div class="contenido-sub-seccion">
+                    <p>Un sangrado es anormal si es espontáneo, simultáneo, en sitios inhabituales (articulaciones) o desproporcionado.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Signo / Hallazgo</th>
+                                <th>Trastorno de la Hemostasia (HP vs. HS)</th>
+                                <th>Etiologías y DxD Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Petequias / Equimosis Pequeñas</strong></td>
+                                <td>VASCULOPLAQUETARIO (HP).</td>
+                                <td>Trombocitopenia (PTI, Fármacos), Vasculitis (púrpura palpable).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hematomas Voluminosos / Hemartrosis</strong></td>
+                                <td>COAGULOPATÍA (HS).</td>
+                                <td>Hemofilia, Déficit de factores, Hepatopatía grave.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hemartrosis Espontánea</strong></td>
+                                <td>COAGULOPATÍA GRAVE.</td>
+                                <td>Patognomónico de trastornos severos de la coagulación (Hemofilia).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ampollas Hemorrágicas Orales / Hemorragias Retinianas</strong></td>
+                                <td>Riesgo de Sangrado Mayor (HS/HP grave).</td>
+                                <td>Lesiones premonitorias de hemorragia intracraneal.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Púrpura Palpable</strong></td>
+                                <td>Vasculitis (inflamación de la pared).</td>
+                                <td>Vasculitis (Schönlein-Henoch, PAN), Sepsis (Meningococemia).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>3. Síntomas Sistémicos, Adenopatías y Esplenomegalia</summary>
+                <div class="contenido-sub-seccion">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Signo / Síntoma</th>
+                                <th>Correlación Clínica</th>
+                                <th>DxD y Razonamiento Fisiopatológico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Adenopatías Generalizadas</strong></td>
+                                <td>Infecciones (mononucleosis, HIV), Linfomas, LLC, Metástasis.</td>
+                                <td>Patología sistémica. Blandas (infección/linfoma) vs. duras/inmóviles (metástasis).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Síntomas B</strong> (Fiebre, Sudoración Nocturna, Pérdida de Peso)</td>
+                                <td>Neoplasias Hematológicas (Linfomas, Mieloma), TBC, Vasculitis.</td>
+                                <td>Estado inflamatorio sistémico o maligno. Claves en Linfoma de Hodgkin.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fiebre de Pel-Ebstein</strong></td>
+                                <td>Linfoma de Hodgkin.</td>
+                                <td>Patrón de fiebre ondulante (días de fiebre seguidos de períodos apiréticos).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dolor a la Percusión Esternal (Craven)</strong></td>
+                                <td>Leucemia Aguda.</td>
+                                <td>Sugiere infiltración medular por blastos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ictericia + Anemia + Esplenomegalia</strong></td>
+                                <td>Síndrome Hemolítico.</td>
+                                <td>Destrucción de GR libera bilirrubina (ictericia) y el bazo aumenta al eliminarlos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prurito tras el Baño Caliente + Eritrosis</strong></td>
+                                <td>Policitemia Vera (PV).</td>
+                                <td>Síntoma altamente sugestivo de PV.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+
+        </div>
+    </details>
+
+    <details class="seccion" id="seccion4">
+        <summary>IV. Hallazgos de Laboratorio Clave (Signos Objetivos)</summary>
+        <div class="contenido-seccion">
+            <p>Los exámenes complementarios no sustituyen la semiología, pero sus hallazgos son signos objetivos.</p>
+
+            <details class="sub-seccion">
+                <summary>A. Hemograma e Índices Hematimétricos</summary>
+                <div class="contenido-sub-seccion">
+                    <ul>
+                        <li><strong>VCM Microcítico (< 80 fL):</strong> Anemia Ferropénica (más común), Talasemias.</li>
+                        <li><strong>VCM Macrocítico (> 100 fL):</strong> Anemia Megaloblástica (déficit B12/Folato), Alcoholismo, Hepatopatías.</li>
+                        <li><strong>RDW (Amplitud de Distribución Eritrocitaria):</strong> Elevado en anisocitosis (variación en tamaño).</li>
+                        <li><strong>Recuento de GR elevado con Hb baja:</strong> Sugiere Talasemias.</li>
+                        <li><strong>Policitemia Vera (PV):</strong> Sospecha ante Hto > 49% (H) o > 48% (M) con eritrosis y prurito. Apoya EPO baja y mutación JAK2.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>B. Frotis de Sangre Periférica (Signo Microscópico)</summary>
+                <div class="contenido-sub-seccion">
+                    <p>El frotis complementa al hemograma, detectando alteraciones aunque el recuento sea normal.</p>
+                    <ul>
+                        <li><strong>Neutrófilos Hipersegmentados:</strong> Signo clave de Megaloblastosis (déficit B12/Folato).</li>
+                        <li><strong>Rouleaux ("Pilas de Monedas"):</strong> Sugiere Mieloma Múltiple o Waldenström.</li>
+                        <li><strong>Blastos:</strong> Sugiere Leucemia Aguda.</li>
+                        <li><strong>Esquistocitos:</strong> Fragmentos de GR (daño mecánico). Sugiere Hemólisis Microangiopática (MAT: PTT, SUH, CID).</li>
+                        <li><strong>Policromatofilia:</strong> Signo de GR inmaduros (reticulocitos). Elevada en Anemia Regenerativa.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>C. Estudios de la Coagulación</summary>
+                <div class="contenido-sub-seccion">
+                    <ul>
+                        <li><strong>TP/APTT prolongados:</strong> Sugiere trastorno de Hemostasia Secundaria (Coagulopatía: Déficit de factores, Hepatopatía).</li>
+                        <li><strong>Plaquetas bajas / Tiempo de Sangría prolongado:</strong> Sugiere trastorno de Hemostasia Primaria (Vasculoplaquetario: Trombocitopenia).</li>
+                        <li><strong>Dímero D y PDF:</strong> Elevados en CID y Estados Protrombóticos.</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </details>
+
+    <details class="seccion" id="seccion5">
+        <summary>V. Perlas Clínicas y Razonamiento Fisiopatológico</summary>
+        <div class="contenido-seccion">
+            
+            <div class="perla-clinica">
+                <strong>Diferenciación de la Anemia en Hemorragia Aguda:</strong> En hemorragia aguda, el Hto/Hb inicial puede ser normal (se pierde sangre entera). El descenso (anemia) se evidencia horas después por hemodilución.
+            </div>
+            <div class="perla-clinica">
+                <strong>Ictericia en Anemia:</strong> En el síndrome hemolítico, la ictericia se debe a sobreproducción de bilirrubina indirecta por destrucción masiva de GR (hemólisis).
+            </div>
+            <div class="perla-clinica">
+                <strong>Uremia y HDA:</strong> En HDA, el aumento desproporcionado de la urea (mayor cociente urea/creatinina) es un signo valioso, por absorción intestinal de la sangre (proteínas).
+            </div>
+            <div class="perla-clinica">
+                <strong>Talasemias:</strong> Anemia microcítica/hipocrómica (como ferropenia), pero con recuento de eritrocitos elevado.
+            </div>
+            <div class="perla-clinica">
+                <strong>Proteinuria en el Mieloma:</strong> La proteinuria de Bence-Jones puede ser negativa en la tira reactiva de orina, pero masiva en 24 horas.
+            </div>
+            <div class="perla-clinica">
+                <strong>Trombocitopenia sin Sangrado:</strong> Sospechar Pseudotrombocitopenia (agregación in vitro por EDTA).
+            </div>
+            <div class="perla-clinica">
+                <strong>Leucocitosis y DxD:</strong> Neutrofilia es común en infecciones bacterianas. Leucocitosis > 50.000/mm³ se llama reacción leucemoide (descartar leucemia).
+            </div>
+            <div class="perla-clinica">
+                <strong>VES > 100 mm/h:</strong> Sugiere Mieloma Múltiple, Neoplasias (linfomas, leucemias) o Enfermedades Autoinmunes (Arteritis Temporal, LES).
+            </div>
+        </div>
+    </details>
+
+    <details class="seccion" id="seccion6">
+        <summary>VI. Síndromes y Patologías Específicas (Amplitud Crítica)</summary>
+        <div class="contenido-seccion">
+
+            <details class="sub-seccion">
+                <summary>A. Anemias Carenciales (Arregenerativas)</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Anemia Ferropénica:</h4>
+                    <ul>
+                        <li><strong>Etiología:</strong> Pérdidas hemáticas crónicas (HDA, Metrorragia), Malabsorción, aumento de requerimientos.</li>
+                        <li><strong>Clínica:</strong> Pica (comer tierra/hielo), queilitis angular, coiloniquia, glositis, palidez.</li>
+                        <li><strong>Lab Clave:</strong> Anemia microcítica, hipocrómica (VCM/HCM bajos). Ferritinemia baja (clave).</li>
+                    </ul>
+                    <h4>Anemia Megaloblástica (Déficit B12/Folato):</h4>
+                    <ul>
+                        <li><strong>Fisiopatología:</strong> Trastorno síntesis de ADN (dishematopoyesis).</li>
+                        <li><strong>Clínica:</strong> Síndrome anémico + Síndrome Neuroanémico (parestesias, apalestesia, ataxia). Tinte ictérico leve. Glositis de Hunter (lengua depapilada).</li>
+                        <li><strong>Lab Clave:</strong> Anemia macrocítica (VCM > 100). Frotis: Neutrófilos Hipersegmentados. LDH elevada.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>B. Anemia Hemolítica (Regenerativa)</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Síndrome Hemolítico:</h4>
+                    <ul>
+                        <li><strong>Clínica (Tríada):</strong> Anemia, Ictericia (flavínica) y Esplenomegalia. Orina oscura.</li>
+                        <li><strong>Lab Clave (Tríada):</strong> Reticulocitos elevados, LDH y Bili Indirecta elevadas, Haptoglobina descendida.</li>
+                        <li><strong>DxD:</strong> Coombs (+) sugiere autoinmune (AHAI). Esquistocitos sugiere mecánica (MAT).</li>
+                        <li><strong>Etiología:</strong> Intracorpusculares (Esferocitosis) o Extracorpusculares (AHAI, MAT).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>C. Patologías Mieloproliferativas Crónicas (SMPC)</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Policitemia Vera (PV):</h4>
+                    <ul>
+                        <li><strong>Clínica:</strong> Eritrosis facial/Rubicundez, esplenomegalia, cefalea, y prurito luego del baño.</li>
+                        <li><strong>Lab Clave:</strong> Hto/Hb elevados. Sospecha ante EPO baja y mutación JAK2 V617F.</li>
+                    </ul>
+                    <h4>Trombocitemia Esencial (TE) y Mielofibrosis Primaria (MF):</h4>
+                    <p>Diagnóstico por exclusión. TE (trombocitosis clonal). MF (fibrosis medular, hematopoyesis extramedular).</p>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>D. Leucemias y Linfomas</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Leucemias Agudas (LA):</h4>
+                    <ul>
+                        <li><strong>Clínica:</strong> Síndrome de Insuficiencia Medular (anemia, sangrado, infecciones) + Síndrome Infiltrativo (adenopatías, hepatoesplenomegalia, dolor óseo/esternal).</li>
+                        <li><strong>Lab Clave:</strong> Anemia, plaquetopenia, y Blastos en sangre periférica.</li>
+                    </ul>
+                    <h4>Linfomas (Hodgkin y No Hodgkin):</h4>
+                    <ul>
+                        <li><strong>Clínica:</strong> Adenopatías (indoloras, firmes). Síntomas B (Fiebre, sudoración, baja de peso).</li>
+                        <li><strong>DxD:</strong> Síndrome Mononucleósico (adenopatías, fiebre, esplenomegalia blanda).</li>
+                        <li><strong>Lab Clave:</strong> Biopsia ganglionar (Células de Reed-Sternberg en Hodgkin).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>E. Discrasias de Células Plasmáticas</summary>
+                <div class="contenido-sub-seccion">
+                    <h4>Mieloma Múltiple (MM):</h4>
+                    <ul>
+                        <li><strong>Clínica (Tétrada CRAB):</strong> Calcio elevado, Renal alterado, Anemia, Bone lesions (líticas, dolor óseo).</li>
+                        <li><strong>Hallazgos Específicos:</strong> Proteinuria de Bence-Jones. VSG > 100 mm/h. Rouleaux en frotis.</li>
+                    </ul>
+                    <h4>Macroglobulinemia de Waldenström:</h4>
+                    <p>IgM monoclonal, adenomegalias, hepatoesplenomegalia, síndrome de hiperviscosidad. Fondo de ojo "ristra de salchichas".</p>
+                </div>
+            </details>
+
+            <details class="sub-seccion">
+                <summary>F. Síndrome Hemorragíparo (Tipificación Fisiopatológica)</summary>
+                <div class="contenido-sub-seccion">
+                    <p>Determinar si es vasculoplaquetario (HP), de coagulación (HS), o ambos.</p>
+                    <h4>VASCULOPLAQUETARIO (HP):</h4>
+                    <ul>
+                        <li><strong>Fisiopatología:</strong> Falla en tapón plaquetario (Trombocitopenia o Vasculopatía).</li>
+                        <li><strong>Clínica:</strong> Sangrado inmediato, superficial (petequias, equimosis pequeñas), mucoso (gingivorragia, epistaxis).</li>
+                    </ul>
+                    <h4>COAGULACIÓN PLASMÁTICA (HS):</h4>
+                    <ul>
+                        <li><strong>Fisiopatología:</strong> Déficit de factores de coagulación.</li>
+                        <li><strong>Clínica:</strong> Sangrado retardado, profundo (hematomas voluminosos), hemartrosis.</li>
+                        <li><strong>Etiologías Graves:</strong> Hemofilia (A o B), Enfermedad de Von Willebrand (más común).</li>
+                    </ul>
+                </div>
+            </details>
+        </div>
+    </details>
+
+    <div class="analogia">
+        <h3>Analogía Semiológica del Hematólogo Exigente</h3>
+        <p>El sistema hematológico es el "sistema logístico" del cuerpo. Al evaluar un paciente, el Catedrático no solo busca la palidez (escasez de transportadores, GR), sino que correlaciona esta escasez con la aceleración del flujo (taquicardia, soplo funcional) para determinar la gravedad inmediata.</p>
+        <p>Los signos de sangrado (púrpura) son el mapa de la fuga: las <strong>petequias</strong> son pequeñas grietas en la manguera (falla plaquetaria, HP), mientras que los <strong>hematomas profundos</strong> son roturas en la tubería principal (falla de coagulación, HS). La <strong>hemartrosis espontánea</strong> es una catástrofe hidráulica que exige intervención inmediata.</p>
+    </div>
+
+</body>
+</html>
